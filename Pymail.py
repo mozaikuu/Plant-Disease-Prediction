@@ -32,7 +32,7 @@ service = build('gmail', 'v1', credentials=creds)
 def prep_and_send_email(disease, soil_moisture):
     # Create message
     message = MIMEMultipart()
-    message['to'] = 'abdalrhmanayoub41@gmail.com'  # Replace with the actual recipient address
+    message['to'] = 'abdalrhmanayoub41@gmail.com' 
     message['subject'] = 'Test email'
     message.attach(MIMEText(f"{disease} - {soil_moisture}"))
     raw_message = base64.urlsafe_b64encode(message.as_bytes()).decode()  
